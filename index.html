@@ -19,12 +19,17 @@
     <img src="ChatGPT Image Jun 9, 2026, 01_57_40 AM.png" alt="NTS Workholding Logo">
     <span class="nav-brand">NTS Workholding</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Products</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#services" onclick="closeNav()">Products</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
     <li><a href="tel:+918168747529" class="nav-cta">Call Us</a></li>
   </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -191,7 +196,7 @@
           </div>
           <div class="contact-item-text">
             <span>Website</span>
-            <a href="http://www.ntsworkholding.com" target="_blank">www.ntsworkholding.com</a>
+            <a href="http://www.ntsworkholding.in" target="_blank">www.ntsworkholding.in</a>
           </div>
         </div>
 
@@ -278,5 +283,22 @@
     }
   });
 </script>
+<script>
+  document.getElementById('btn-send').addEventListener('click', async () => {
+    // ... your existing code stays here unchanged
+  });
+</script>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  function closeNav() {
+    navLinks.classList.remove('open');
+  }
+</script>
+</body>
 </body>
 </html>
